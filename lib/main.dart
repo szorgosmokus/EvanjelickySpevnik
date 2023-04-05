@@ -1,7 +1,6 @@
 import 'dart:ffi';
 //Tet comment to see if project is on github
 //Second test to test branches this
-//This comment is to simulate work I did for a couple hours. Now at last I decide that it is no good and I want to revert back
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
