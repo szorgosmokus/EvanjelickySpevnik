@@ -1,6 +1,5 @@
 import 'dart:ffi';
 //Tet comment to see if project is on github
-//Second test to test branches this
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
