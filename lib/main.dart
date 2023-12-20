@@ -1,9 +1,10 @@
-import 'dart:ffi';
+//import 'dart:ffi';
 //Tet comment to see if project is on github
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:wakelock/wakelock.dart';
+import 'package:test_app_explore/songbook.dart';
 
 //------- Declaration of values ----------
 const String appTitle = "Evanjelický spevník";
@@ -272,62 +273,29 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // replace this function with the examples above
   showSongPickerDialog(BuildContext context) {
-
-    // set up the list options
-    Widget optionOne = SimpleDialogOption(
-      child: const Text('horse'),
-      onPressed: () {
-        print('horse');
-        Navigator.of(context).pop();
-      },
-    );
-    Widget optionTwo = SimpleDialogOption(
-      child: const Text('cow'),
-      onPressed: () {
-        print('cow');
-        Navigator.of(context).pop();
-      },
-    );
-    Widget optionThree = SimpleDialogOption(
-      child: const Text('camel'),
-      onPressed: () {
-        print('camel');
-        Navigator.of(context).pop();
-      },
-    );
-    Widget optionFour = SimpleDialogOption(
-      child: const Text('sheep'),
-      onPressed: () {
-        print('sheep');
-        Navigator.of(context).pop();
-      },
-    );
-    Widget optionFive = SimpleDialogOption(
-      child: const Text('goat'),
-      onPressed: () {
-        print('goat');
-        Navigator.of(context).pop();
-      },
+    var dialog = SimpleDialog(
+      title: Text('Zvoľte si pieseň'),
+      children: _buildDialogOptions(context),
     );
 
-    // set up the SimpleDialog
-    SimpleDialog dialog = SimpleDialog(
-      title: const Text('Choose an animal'),
-      children: <Widget>[
-        optionOne,
-        optionTwo,
-        optionThree,
-        optionFour,
-        optionFive,
-      ],
-    );
-
-    // show the dialog
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return dialog;
       },
     );
+  }
+
+  List<Widget> _buildDialogOptions(BuildContext context) {
+    List<Widget> options = [];
+    for (final v in piesne) {
+      options.add(SimpleDialogOption(
+        child: Text(v),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ));
+    }
+    return options;
   }
 }
