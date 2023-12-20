@@ -98,6 +98,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: appTitle,
       theme: lightTheme,
       home: const MyHomePage(title: appTitle),
@@ -163,6 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return MaterialApp(
       theme: currentTheme,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
@@ -250,6 +252,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 // ...
               },
             ),
+
+            /*
             ListTile(
               title: const Text('Antifóny'),
               onTap: () {
@@ -257,9 +261,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 // ...
               },
             ),
+            */
           ],
         )),
 
+
+        //Floating action button nebudeme pouzivat pri vybere piesni
+         /*
         // Tento floating button by sa mozno dal nahradit menej napadnym gombikom v hornom menu.
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -267,6 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
           child: const Icon(Icons.list_alt_rounded),
         ), // This trailing comma makes auto-formatting nicer for build methods.
+        */
       ),
     );
   }

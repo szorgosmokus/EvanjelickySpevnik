@@ -1,4 +1,4 @@
-package com.example.test_app_explore
+package smartphone.csandaz.evanjelickyspevnik2
 
 import io.flutter.embedding.android.FlutterActivity
 
