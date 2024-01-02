@@ -218,7 +218,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         onTap: () {
                           // I blank out the input in the textfield when the user taps on it
-                          songNumber.text = "";
+                          songNumber.clear();
                         },
                       ),
                     ),

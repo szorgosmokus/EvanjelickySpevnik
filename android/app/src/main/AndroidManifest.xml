@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="smartphone.csandaz.evanjelickyspevnik2">
    <application
-        android:label="test_app_explore"
+        android:label="Spevník - test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
